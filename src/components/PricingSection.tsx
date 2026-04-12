@@ -17,7 +17,7 @@ const PricingSection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="border border-foreground bg-primary text-primary-foreground p-16 inline-block"
+        className="border border-border bg-background text-foreground p-16 inline-block"
       >
         <p className="font-heading text-6xl md:text-8xl font-bold">999 ש״ח</p>
         <p className="text-sm font-body mt-4 opacity-70">לכל החיים!</p>
