@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
+import ninaImg from "@/assets/nina.png";
+import valeriaImg from "@/assets/valeria.png";
+import hachatziImg from "@/assets/hachatzi.png";
 
 const projects = [
-  { title: "נינה קוסמטיקאית", desc: "אתר תדמית ונוכחות דיגיטלית יוקרתית." },
-  { title: "ולריה קוסמטיקאית", desc: "פלטפורמת תדמית ונוכחות דיגיטלית מקצועית." },
-  { title: "החצי השני - בית קפה", desc: "אתר לחנות ולפרסום בית הקפה." },
+  { title: "נינה קוסמטיקאית", desc: "אתר תדמית ונוכחות דיגיטלית יוקרתית.", image: ninaImg },
+  { title: "ולריה קוסמטיקאית", desc: "פלטפורמת תדמית ונוכחות דיגיטלית מקצועית.", image: valeriaImg },
+  { title: "החצי השני - בית קפה", desc: "אתר לחנות ולפרסום בית הקפה.", image: hachatziImg },
 ];
 
 const PortfolioSection = () => (
@@ -26,12 +29,14 @@ const PortfolioSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.1 }}
-            className="bg-background border border-border group"
+            className="bg-background border border-border group overflow-hidden"
           >
-            <div className="aspect-[4/3] bg-muted flex items-center justify-center">
-              <span className="text-xs uppercase tracking-widest text-muted-foreground">
-                תצוגה מקדימה
-              </span>
+            <div className="aspect-[4/3] overflow-hidden">
+              <img
+                src={p.image}
+                alt={p.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
             <div className="p-6">
               <h3 className="font-heading font-bold text-lg text-foreground">{p.title}</h3>
