@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 
 const projects = [
-  { title: "Nina Mahr", desc: "Aesthetics & Cosmetics — A premium digital presence." },
-  { title: "Abraham's Bar", desc: "Nightlife & Hospitality — Modern operational platform." },
-  { title: "Boutique Fitness Studio", desc: "Optimized conversion-focused landing page." },
+  { title: "נינה קוסמטיקאית", desc: "אתר תדמית ונוכחות דיגיטלית יוקרתית." },
+  { title: "ולריה קוסמטיקאית", desc: "פלטפורמת תדמית ונוכחות דיגיטלית מקצועית." },
+  { title: "החצי השני - בית קפה", desc: "אתר לחנות ולפרסום בית הקפה." },
 ];
 
 const PortfolioSection = () => (
-  <section id="portfolio" className="py-32 px-6 bg-secondary">
+  <section id="portfolio" className="py-32 px-6 bg-secondary" dir="rtl">
     <div className="max-w-6xl mx-auto">
       <motion.h2
         initial={{ opacity: 0 }}
@@ -15,7 +15,7 @@ const PortfolioSection = () => (
         viewport={{ once: true }}
         className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-16 text-center"
       >
-        Digital Solutions Provided
+        פתרונות דיגיטליים
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -30,7 +30,7 @@ const PortfolioSection = () => (
           >
             <div className="aspect-[4/3] bg-muted flex items-center justify-center">
               <span className="text-xs uppercase tracking-widest text-muted-foreground">
-                Preview
+                תצוגה מקדימה
               </span>
             </div>
             <div className="p-6">
@@ -42,7 +42,7 @@ const PortfolioSection = () => (
       </div>
 
       <p className="text-center text-sm text-muted-foreground mt-16 max-w-lg mx-auto font-body leading-relaxed">
-        Every project is a result of precise communication and strategic planning with business owners nationwide.
+        כל פרויקט הוא תוצאה של תקשורת מדויקת ותכנון אסטרטגי עם בעלי עסקים ברחבי הארץ.
       </p>
     </div>
   </section>
