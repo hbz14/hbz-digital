@@ -26,9 +26,9 @@ const HeroSection = () => (
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.6 }}
-      className="mt-10 inline-block border border-foreground bg-primary text-primary-foreground px-8 py-3 text-sm font-heading font-semibold uppercase tracking-widest hover:bg-background hover:text-foreground transition-colors"
+      className="mt-10 inline-block border border-foreground bg-primary text-primary-foreground px-8 py-3 text-sm font-heading font-semibold tracking-widest hover:bg-background hover:text-foreground transition-colors"
     >
-      Let's Talk
+      בואו נדבר
     </motion.a>
   </section>
 );

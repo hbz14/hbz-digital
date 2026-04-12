@@ -3,10 +3,10 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Why Us?", href: "#pillars" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "תיק עבודות", href: "#portfolio" },
+  { label: "למה אנחנו?", href: "#pillars" },
+  { label: "מחיר", href: "#pricing" },
+  { label: "צור קשר", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 md:py-5">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 md:py-5" dir="rtl">
         <a href="#" className="font-heading text-xl font-bold tracking-tight text-foreground">
           HBZ digital
         </a>
@@ -25,7 +25,7 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm font-body text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
+              className="text-sm font-body text-muted-foreground hover:text-foreground transition-colors tracking-wide"
             >
               {l.label}
             </a>
@@ -47,13 +47,13 @@ const Navbar = () => {
             exit={{ height: 0, opacity: 0 }}
             className="md:hidden overflow-hidden bg-background border-b border-border"
           >
-            <div className="flex flex-col px-6 pb-6 gap-4">
+            <div className="flex flex-col px-6 pb-6 gap-4" dir="rtl">
               {links.map((l) => (
                 <a
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="text-sm font-body text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wide"
+                  className="text-sm font-body text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {l.label}
                 </a>

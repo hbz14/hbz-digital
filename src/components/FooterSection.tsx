@@ -1,14 +1,14 @@
 import { MessageCircle } from "lucide-react";
 
 const FooterSection = () => (
-  <footer id="contact" className="bg-primary text-primary-foreground py-24 px-6">
+  <footer id="contact" className="bg-primary text-primary-foreground py-24 px-6" dir="rtl">
     <div className="max-w-3xl mx-auto text-center">
       <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
-        Ready to elevate your brand?
+        מוכנים להעלות את המותג שלכם?
       </h2>
 
       <p className="text-sm opacity-70 font-body mb-10 max-w-md mx-auto leading-relaxed">
-        Serving businesses nationwide across Israel. We come to you, wherever you are.
+        אנו משרתים עסקים בכל רחבי הארץ. אנחנו מגיעים אליכם, בכל מקום שתהיו.
       </p>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -19,7 +19,7 @@ const FooterSection = () => (
           className="inline-flex items-center gap-2 border border-primary-foreground bg-primary-foreground text-primary px-8 py-3 text-sm font-heading font-semibold uppercase tracking-widest hover:bg-transparent hover:text-primary-foreground transition-colors"
         >
           <MessageCircle size={16} />
-          WhatsApp
+          WHATSAPP
         </a>
 
         <a
@@ -28,7 +28,7 @@ const FooterSection = () => (
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 border border-primary-foreground px-8 py-3 text-sm font-heading font-semibold uppercase tracking-widest hover:bg-primary-foreground hover:text-primary transition-colors"
         >
-          Instagram
+          INSTAGRAM
         </a>
       </div>
 
