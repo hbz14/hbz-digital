@@ -64,6 +64,16 @@ const ProjectsSection = () => (
           </motion.a>
         ))}
       </div>
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="text-center text-muted-foreground font-body text-sm mt-16"
+      >
+        גם האתר הזה עוצב ונבנה על ידינו!!
+      </motion.p>
     </div>
   </section>
 );
