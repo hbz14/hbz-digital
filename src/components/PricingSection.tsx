@@ -19,10 +19,7 @@ const PricingSection = () => (
         transition={{ duration: 0.6 }}
         className="border border-border bg-background text-foreground p-16 inline-block"
       >
-        <p className="font-heading text-5xl md:text-7xl font-bold text-foreground">
-          999 ש״ח
-        </p>
-        <p className="text-sm font-body mt-2 opacity-50">לכל החיים!</p>
+        <p className="font-heading text-5xl md:text-7xl font-bold text-foreground">999 ש״ח</p>
       </motion.div>
     </div>
   </section>
