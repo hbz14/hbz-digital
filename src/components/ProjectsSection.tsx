@@ -5,6 +5,11 @@ import lavitaImg from "@/assets/lavita.png";
 import ninaMahrImg from "@/assets/nina-mahr.png";
 import barberIsraelImg from "@/assets/barber-israel.png";
 import hetzisheniImg from "@/assets/hetzisheni.png";
+import ndBarberImg from "@/assets/nd-barber.png";
+import aviadAmarImg from "@/assets/aviad-amar.png";
+import eretzHatzviImg from "@/assets/eretz-hatzvi.png";
+import someoneHairImg from "@/assets/someone-hair.png";
+import ginaCafeImg from "@/assets/gina-cafe.png";
 
 const projects = [
   { title: "Weins Barbershop", image: weinsImg, link: "https://weins-barbershop.lovable.app" },
@@ -12,6 +17,11 @@ const projects = [
   { title: "Nina Mahr Beauty", image: ninaMahrImg, link: "https://nina-mahr-beauty.lovable.app" },
   { title: "Barber Shop Israel", image: barberIsraelImg, link: "https://barber-shop-israel.lovable.app" },
   { title: "Hetzi Sheni", image: hetzisheniImg, link: "https://hetzisheni.lovable.app/" },
+  { title: "N.D Barbershop - מספרה בצפון", image: ndBarberImg, link: "https://ndbarber.lovable.app" },
+  { title: "אביעד עמר - מספרה בשדרות", image: aviadAmarImg, link: "https://aviadamar-babershop.lovable.app" },
+  { title: "מאפיית ארץ הצבי - מאפייה בצפון", image: eretzHatzviImg, link: "https://eretzhatzvibakery.lovable.app" },
+  { title: "מספרה של איש אחד - מבשרת ציון", image: someoneHairImg, link: "https://somone-hair-salon.lovable.app" },
+  { title: "קפה גינה - בית קפה ברמת גן", image: ginaCafeImg, link: "https://gina-cofee-shop.lovable.app" },
 ];
 
 const ProjectsSection = () => (
