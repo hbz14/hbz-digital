@@ -1,67 +1,73 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
-  { label: "תיק עבודות", href: "#portfolio" },
+  { label: "תיק עבודות", href: "#projects" },
   { label: "למה אנחנו?", href: "#pillars" },
-  { label: "מחיר", href: "#pricing" },
   { label: "צור קשר", href: "#contact" },
 ];
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 md:py-5" dir="rtl">
-        <a href="#" className="font-heading text-xl font-bold tracking-tight text-foreground">
-          HBZ digital
+    <nav
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-black/80 backdrop-blur-lg border-b border-zinc-800/50"
+          : "bg-transparent"
+      }`}
+      dir="rtl"
+    >
+      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="#" className="flex items-center gap-0.5">
+          <span className="font-heading text-xl font-light tracking-tight text-zinc-300">digital</span>
+          <span className="font-heading text-xl font-black tracking-tight text-violet-500">.</span>
+          <span className="font-heading text-xl font-black tracking-tight text-white">Hbz</span>
         </a>
 
-        {/* Desktop */}
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm font-body text-muted-foreground hover:text-foreground transition-colors tracking-wide"
+              className="text-sm font-heading font-medium text-zinc-400 hover:text-violet-400 transition-colors"
             >
               {l.label}
             </a>
           ))}
         </div>
 
-        {/* Mobile toggle */}
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
-          {open ? <X size={22} /> : <Menu size={22} />}
+        <button
+          className="md:hidden text-zinc-300 hover:text-violet-400 transition-colors"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="תפריט"
+        >
+          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="md:hidden overflow-hidden bg-background border-b border-border"
-          >
-            <div className="flex flex-col px-6 pb-6 gap-4" dir="rtl">
-              {links.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className="text-sm font-body text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {l.label}
-                </a>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {mobileOpen && (
+        <div className="md:hidden bg-black/95 backdrop-blur-lg border-t border-zinc-800/50 px-6 py-4 space-y-4">
+          {links.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="block text-base font-heading text-zinc-300 hover:text-violet-400 transition-colors"
+              onClick={() => setMobileOpen(false)}
+            >
+              {l.label}
+            </a>
+          ))}
+        </div>
+      )}
     </nav>
   );
 };
