@@ -3,6 +3,7 @@ import { MagnetizeButton } from "@/components/ui/magnetize-button";
 import { Spotlight } from "@/components/ui/spotlight";
 import { BackgroundPaths } from "@/components/ui/background-paths";
 import { ShaderAnimation } from "@/components/ui/shader-animation";
+import VaporizeTextCycle, { Tag } from "@/components/ui/vaporize-text";
 
 const Spline = lazy(() => import("@splinetool/react-spline"));
 
@@ -29,11 +30,27 @@ const HeroSection = () => (
           בניית אתרים לעסקים קטנים
         </p>
 
-        <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-400 animate-fade-in-up stagger-1">
-          אתר שעובד
-          <br />
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-violet-600 glow-text">בשבילך.</span>
-        </h1>
+        <div className="animate-fade-in-up stagger-1 h-[80px] md:h-[120px] lg:h-[140px] w-full max-w-xl mx-auto md:mx-0">
+          <VaporizeTextCycle
+            texts={["אתר שעובד בשבילך.", "עיצוב שמוכר.", "נוכחות דיגיטלית."]}
+            font={{
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontSize: "70px",
+              fontWeight: 700,
+            }}
+            color="rgb(255, 255, 255)"
+            spread={5}
+            density={5}
+            animation={{
+              vaporizeDuration: 2,
+              fadeInDuration: 1,
+              waitDuration: 1.5,
+            }}
+            direction="right-to-left"
+            alignment="center"
+            tag={Tag.H1}
+          />
+        </div>
 
         <p className="mt-8 text-base md:text-lg text-zinc-400 font-body max-w-xl mx-auto md:mx-0 leading-relaxed animate-fade-in-up stagger-3">
           מספרות, בתי קפה, קוסמטיקה ועסקים קטנים — אנחנו בונים אתרים מהירים,
