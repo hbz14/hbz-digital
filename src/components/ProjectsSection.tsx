@@ -25,8 +25,9 @@ const projects = [
   { title: "מאפיית ארץ הצבי - מאפייה בצפון", image: eretzHatzviImg, link: "https://eretzhatzvibakery.lovable.app" },
   { title: "מספרה של איש אחד - מבשרת ציון", image: someoneHairImg, link: "https://somone-hair-salon.lovable.app" },
   { title: "קפה גינה - בית קפה ברמת גן", image: ginaCafeImg, link: "https://gina-cofee-shop.lovable.app" },
-  { title: "רפאל שמואל — יזם ומנטור עסקי", image: null, link: "https://refalshmuel.lovable.app/" },
-  { title: "קפה ברקאי — בית קפה בים המלח", image: null, link: "https://dessertbarakai.lovable.app/" },
+  { title: "רפאל שמואל — יזם ומנטור עסקי", image: refalShmuelImg, link: "https://refalshmuel.lovable.app/" },
+  { title: "קפה ברקאי — בית קפה בים המלח", image: cafeBarakaiImg, link: "https://dessertbarakai.lovable.app/" },
+
 ];
 
 const getAnimClass = (i: number) => {
