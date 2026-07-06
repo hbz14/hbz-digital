@@ -10,6 +10,9 @@ import aviadAmarImg from "@/assets/aviad-amar.png";
 import eretzHatzviImg from "@/assets/eretz-hatzvi.png";
 import someoneHairImg from "@/assets/someone-hair.png";
 import ginaCafeImg from "@/assets/gina-cafe.png";
+import refalShmuelImg from "@/assets/refal-shmuel.png";
+import cafeBarakaiImg from "@/assets/cafe-barakai.png";
+
 
 const projects = [
   { title: "Weins Barbershop", image: weinsImg, link: "https://weins-barbershop.lovable.app" },
