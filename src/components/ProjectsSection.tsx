@@ -10,6 +10,9 @@ import aviadAmarImg from "@/assets/aviad-amar.png";
 import eretzHatzviImg from "@/assets/eretz-hatzvi.png";
 import someoneHairImg from "@/assets/someone-hair.png";
 import ginaCafeImg from "@/assets/gina-cafe.png";
+import refalShmuelImg from "@/assets/refal-shmuel.png";
+import cafeBarakaiImg from "@/assets/cafe-barakai.png";
+
 
 const projects = [
   { title: "Weins Barbershop", image: weinsImg, link: "https://weins-barbershop.lovable.app" },
@@ -22,8 +25,9 @@ const projects = [
   { title: "מאפיית ארץ הצבי - מאפייה בצפון", image: eretzHatzviImg, link: "https://eretzhatzvibakery.lovable.app" },
   { title: "מספרה של איש אחד - מבשרת ציון", image: someoneHairImg, link: "https://somone-hair-salon.lovable.app" },
   { title: "קפה גינה - בית קפה ברמת גן", image: ginaCafeImg, link: "https://gina-cofee-shop.lovable.app" },
-  { title: "רפאל שמואל — יזם ומנטור עסקי", image: null, link: "https://refalshmuel.lovable.app/" },
-  { title: "קפה ברקאי — בית קפה בים המלח", image: null, link: "https://dessertbarakai.lovable.app/" },
+  { title: "רפאל שמואל — יזם ומנטור עסקי", image: refalShmuelImg, link: "https://refalshmuel.lovable.app/" },
+  { title: "קפה ברקאי — בית קפה בים המלח", image: cafeBarakaiImg, link: "https://dessertbarakai.lovable.app/" },
+
 ];
 
 const getAnimClass = (i: number) => {
