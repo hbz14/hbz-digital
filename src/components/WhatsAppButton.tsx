@@ -11,7 +11,7 @@ const WhatsAppButton = () => (
   >
     <MessageCircle size={22} strokeWidth={2} />
     <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 whitespace-nowrap text-sm font-heading font-semibold">
-      דברו איתנו
+      שלחו הודעה
     </span>
   </a>
 );

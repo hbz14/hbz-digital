@@ -8,9 +8,9 @@ import VaporizeTextCycle, { Tag } from "@/components/ui/vaporize-text";
 const Spline = lazy(() => import("@splinetool/react-spline"));
 
 const stats = [
-  { number: "10+", label: "אתרים שנבנו" },
+  { number: "6+", label: "סוגי עסקים" },
   { number: "ימים", label: "זמן אספקה ממוצע" },
-  { number: "100%", label: "שביעות רצון" },
+  { number: "100%", label: "מותאם לנייד" },
 ];
 
 const HeroSection = () => (
@@ -58,9 +58,9 @@ const HeroSection = () => (
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 animate-fade-in-up stagger-4">
-          <a href="https://wa.me/972556884471?text=%D7%94%D7%99%D7%99%2C%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%90%D7%AA%D7%A8%20%D7%9C%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99!" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/972556884471?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%95%D7%92%D7%9E%D7%94%20%D7%9C%D7%90%D7%AA%D7%A8%20%D7%9C%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99.%20%D7%A9%D7%9D%20%D7%94%D7%A2%D7%A1%D7%A7%3A%20" target="_blank" rel="noopener noreferrer">
             <MagnetizeButton className="bg-violet-600 text-white hover:bg-violet-500 animate-pulse-glow">
-              בואו נדבר
+              שלחו שם עסק — ותקבלו דוגמה
             </MagnetizeButton>
           </a>
           <a href="#projects">

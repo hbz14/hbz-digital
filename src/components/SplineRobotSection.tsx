@@ -28,26 +28,25 @@ const SplineRobotSection = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center min-h-0 md:min-h-[500px] relative z-10">
         <div className="flex-1 p-8 md:p-12 flex flex-col justify-center text-right scroll-animate-right">
           <p className="text-xs font-heading font-semibold tracking-[0.3em] text-violet-400 uppercase mb-4">
-            טכנולוגיה מתקדמת
+            פשוט. מהיר. שלכם.
           </p>
           <h2 className="font-heading text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-6">
-            אנחנו בונים את העתיד
+            אתר שעובד בשבילך, במחיר שעובד בשבילך
           </h2>
           <p className="text-neutral-300 font-body leading-relaxed max-w-md">
-            באמצעות כלים חדשניים וטכנולוגיות מתקדמות, אנחנו יוצרים אתרים שלא רק נראים
-            מדהים — אלא גם עובדים חכם. כל אתר מותאם אישית לעסק שלכם, עם ביצועים
-            מהירים וחוויית משתמש ברמה הגבוהה ביותר. מהתאמה מלאה לכל גודל מסך,
-            דרך אופטימיזציה למנועי חיפוש, ועד אינטגרציות עם וואטסאפ ורשתות
-            חברתיות — אנחנו דואגים שהאתר שלכם יעבוד בשבילכם 24/7 ויביא לקוחות חדשים.
+            שולחים לנו את שם העסק — ומקבלים דוגמה ראשונית לאתר, בלי התחייבות.
+            אהבתם? תוך ימים בודדים יש לכם אתר מהיר, מותאם לנייד, עם כפתור
+            וואטסאפ שמביא את הלקוח ישירות אליכם. כל המידע על העסק — תפריט,
+            שירותים, גלריה, ביקורות — במקום אחד שעובד בשבילכם 24/7.
           </p>
 
           <a
-            href="https://wa.me/972556884471?text=%D7%94%D7%99%D7%99%2C%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%90%D7%AA%D7%A8%20%D7%9C%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99!"
+            href="https://wa.me/972556884471?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%9B%D7%9E%D7%94%20%D7%96%D7%94%20%D7%A2%D7%95%D7%9C%D7%94%20%D7%95%D7%9C%D7%A7%D7%91%D7%9C%20%D7%93%D7%95%D7%92%D7%9E%D7%94"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-8 bg-violet-600 text-white px-8 py-3 text-sm font-heading font-semibold tracking-widest rounded-lg hover:bg-violet-500 transition-all animate-pulse-glow w-fit scroll-animate stagger-5"
           >
-            רוצים לשמוע עוד?
+            כמה זה עולה? שלחו הודעה
           </a>
         </div>
 
