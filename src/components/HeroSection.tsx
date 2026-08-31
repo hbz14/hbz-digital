@@ -1,11 +1,4 @@
-import { Suspense, lazy } from "react";
 import { MagnetizeButton } from "@/components/ui/magnetize-button";
-import { Spotlight } from "@/components/ui/spotlight";
-import { BackgroundPaths } from "@/components/ui/background-paths";
-import { ShaderAnimation } from "@/components/ui/shader-animation";
-import VaporizeTextCycle, { Tag } from "@/components/ui/vaporize-text";
-
-const Spline = lazy(() => import("@splinetool/react-spline"));
 
 const stats = [
   { number: "6+", label: "סוגי עסקים" },
@@ -14,94 +7,41 @@ const stats = [
 ];
 
 const HeroSection = () => (
-  <section className="relative min-h-screen flex items-center overflow-hidden bg-black" dir="rtl">
-    {/* Shader background - hidden on mobile for performance */}
-    <div className="absolute inset-0 opacity-30 hidden md:block">
-      <ShaderAnimation />
-    </div>
+  <section className="relative min-h-screen flex items-center bg-white" dir="rtl">
+    <div className="relative z-10 max-w-4xl mx-auto w-full px-6 text-center md:text-right pt-24 pb-16">
+      <p className="text-sm font-heading font-semibold tracking-[0.2em] text-violet-600 mb-6 animate-fade-in">
+        בניית אתרים לעסקים קטנים
+      </p>
 
-    <Spotlight className="-top-40 right-0 md:right-60 md:-top-20" fill="#8b5cf6" />
-    <BackgroundPaths />
+      <h1 className="font-heading text-4xl md:text-6xl font-bold text-zinc-900 leading-tight animate-fade-in-up stagger-1">
+        אתר שעובד בשבילך.
+      </h1>
 
-    <div className="relative z-10 max-w-7xl mx-auto w-full px-6 flex flex-col md:flex-row items-center gap-8">
-      {/* Text side */}
-      <div className="flex-1 text-center md:text-right">
-        <p className="text-sm font-heading font-semibold tracking-[0.2em] text-violet-400 mb-6 animate-fade-in">
-          בניית אתרים לעסקים קטנים
-        </p>
+      <p className="mt-6 text-base md:text-lg text-zinc-600 font-body max-w-xl mx-auto md:mx-0 leading-relaxed animate-fade-in-up stagger-2">
+        מספרות, בתי קפה, קוסמטיקה ועסקים קטנים — אנחנו בונים אתרים מהירים,
+        יפים ומותאמים לנייד. במחיר שכל עסק יכול להרשות לעצמו.
+      </p>
 
-        <div className="animate-fade-in-up stagger-1 h-[80px] md:h-[120px] lg:h-[140px] w-full max-w-xl mx-auto md:mx-0">
-          <VaporizeTextCycle
-            texts={["אתר שעובד בשבילך.", "עיצוב שמוכר.", "נוכחות דיגיטלית."]}
-            font={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontSize: "70px",
-              fontWeight: 700,
-            }}
-            color="rgb(255, 255, 255)"
-            spread={5}
-            density={5}
-            animation={{
-              vaporizeDuration: 2,
-              fadeInDuration: 1,
-              waitDuration: 1.5,
-            }}
-            direction="right-to-left"
-            alignment="center"
-            tag={Tag.H1}
-          />
-        </div>
-
-        <p className="mt-8 text-base md:text-lg text-zinc-400 font-body max-w-xl mx-auto md:mx-0 leading-relaxed animate-fade-in-up stagger-3">
-          מספרות, בתי קפה, קוסמטיקה ועסקים קטנים — אנחנו בונים אתרים מהירים,
-          יפים ומותאמים לנייד. במחיר שכל עסק יכול להרשות לעצמו.
-        </p>
-
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 animate-fade-in-up stagger-4">
-          <a href="https://wa.me/972556884471?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%95%D7%92%D7%9E%D7%94%20%D7%9C%D7%90%D7%AA%D7%A8%20%D7%9C%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99.%20%D7%A9%D7%9D%20%D7%94%D7%A2%D7%A1%D7%A7%3A%20" target="_blank" rel="noopener noreferrer">
-            <MagnetizeButton className="bg-violet-600 text-white hover:bg-violet-500 animate-pulse-glow">
-              שלחו שם עסק — ותקבלו דוגמה
-            </MagnetizeButton>
-          </a>
-          <a href="#projects">
-            <MagnetizeButton className="border border-zinc-700 text-zinc-300 hover:border-violet-500 hover:text-violet-400">
-              תיק עבודות
-            </MagnetizeButton>
-          </a>
-        </div>
-
-        <div className="mt-16 grid grid-cols-3 gap-8 border-t border-zinc-800 pt-8 max-w-md mx-auto md:mx-0">
-          {stats.map((s, i) => (
-            <div key={s.label} className={`text-center md:text-right animate-count-up stagger-${i + 5}`}>
-              <div className="font-heading text-3xl font-bold text-white">{s.number}</div>
-              <div className="text-xs text-zinc-500 mt-1 font-body">{s.label}</div>
-            </div>
-          ))}
-        </div>
+      <div className="mt-10 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 animate-fade-in-up stagger-3">
+        <a href="https://wa.me/972556884471?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%95%D7%92%D7%9E%D7%94%20%D7%9C%D7%90%D7%AA%D7%A8%20%D7%9C%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99.%20%D7%A9%D7%9D%20%D7%94%D7%A2%D7%A1%D7%A7%3A%20" target="_blank" rel="noopener noreferrer">
+          <MagnetizeButton className="bg-violet-600 text-white hover:bg-violet-500">
+            שלחו שם עסק — ותקבלו דוגמה
+          </MagnetizeButton>
+        </a>
+        <a href="#projects">
+          <MagnetizeButton className="border border-zinc-300 text-zinc-700 hover:border-violet-500 hover:text-violet-600">
+            תיק עבודות
+          </MagnetizeButton>
+        </a>
       </div>
 
-      {/* Spline side - hidden on mobile */}
-      <div className="hidden md:block flex-1 h-[500px] lg:h-[600px] relative animate-fade-in-up stagger-2">
-        <Suspense
-          fallback={
-            <div className="w-full h-full flex items-center justify-center">
-              <div className="w-10 h-10 border-2 border-violet-500 border-t-transparent rounded-full animate-spin" />
-            </div>
-          }
-        >
-          <Spline
-            scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-            className="w-full h-full"
-          />
-        </Suspense>
-      </div>
-    </div>
-
-    {/* Scroll indicator */}
-    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in stagger-8">
-      <span className="text-xs text-zinc-500 font-body">גלול למטה</span>
-      <div className="w-5 h-8 border-2 border-zinc-600 rounded-full flex justify-center pt-1">
-        <div className="w-1.5 h-1.5 bg-violet-500 rounded-full animate-float" />
+      <div className="mt-16 grid grid-cols-3 gap-8 border-t border-zinc-200 pt-8 max-w-md mx-auto md:mx-0">
+        {stats.map((s) => (
+          <div key={s.label} className="text-center md:text-right">
+            <div className="font-heading text-3xl font-bold text-zinc-900">{s.number}</div>
+            <div className="text-xs text-zinc-500 mt-1 font-body">{s.label}</div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
