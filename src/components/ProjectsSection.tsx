@@ -30,7 +30,11 @@ const projects = [
   { title: "קפה ברקאי — בית קפה בים המלח", image: cafeBarakaiImg, link: "https://dessertbarakai.lovable.app/" },
 ];
 
-const streamImages = projects.map((p) => ({ src: p.image, alt: p.title }));
+const galleryItems: GalleryItem[] = projects.map((p) => ({
+  common: p.title,
+  photo: { url: p.image, text: p.title },
+  link: p.link,
+}));
 
 const ProjectsSection = () => {
   const ref = useScrollAnimate();
@@ -49,13 +53,13 @@ const ProjectsSection = () => {
         </p>
       </div>
 
-      <ImageStreamHero
-        images={streamImages}
-        cards={10}
-        speed={20}
-        axis={50}
-        className="h-[420px] md:h-[560px] [mask-image:radial-gradient(120%_80%_at_50%_50%,black_55%,transparent_100%)]"
+      <CircularGallery
+        items={galleryItems}
+        radius={620}
+        autoRotateSpeed={0.03}
+        className="h-[420px] md:h-[560px]"
       />
+
 
       <div className="max-w-6xl mx-auto px-6 mt-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
