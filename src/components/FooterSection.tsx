@@ -1,4 +1,4 @@
-import { MessageCircle, ArrowUp } from "lucide-react";
+import { Instagram, ArrowUp } from "lucide-react";
 import { useScrollAnimate } from "@/hooks/useScrollAnimate";
 
 const FooterSection = () => {
@@ -21,13 +21,13 @@ const FooterSection = () => {
 
           <div className="flex items-center gap-4 scroll-animate-left">
             <a
-              href="https://wa.me/972556884471?text=%D7%94%D7%99%D7%99%2C%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%90%D7%AA%D7%A8%20%D7%9C%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99!"
+              href="https://www.instagram.com/hbz.digital/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm tracking-widest hover:opacity-90 transition-all hover:scale-105"
             >
-              <MessageCircle size={20} />
-              דברו איתנו בוואטסאפ
+              <Instagram size={20} />
+              עקבו אחרינו באינסטגרם
             </a>
 
             <button
