@@ -2,19 +2,17 @@ import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import hachatziImg from "@/assets/hachatzi.png";
 
 const ShowcaseSection = () => (
-  <section className="bg-black/[0.96] overflow-hidden" dir="rtl">
+  <section className="bg-background overflow-hidden" dir="rtl">
     <ContainerScroll
       titleComponent={
         <>
-          <p className="text-xs font-heading font-semibold tracking-[0.3em] text-violet-400 uppercase mb-4">
+          <p className="text-xs font-heading font-semibold tracking-[0.3em] text-primary uppercase mb-4">
             חוויה דיגיטלית
           </p>
-          <h2 className="font-heading text-4xl md:text-[5rem] font-bold leading-none bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-400">
+          <h2 className="font-heading text-4xl md:text-[5rem] font-bold leading-none text-foreground">
             אתרים שמדברים
             <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-violet-600">
-              בשביל העסק שלכם
-            </span>
+            <span className="text-primary">בשביל העסק שלכם</span>
           </h2>
         </>
       }

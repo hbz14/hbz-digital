@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { useScrollAnimate } from "@/hooks/useScrollAnimate";
+import { ImageStreamHero } from "@/components/ui/image-stream-hero";
 import weinsImg from "@/assets/weins.png";
 import lavitaImg from "@/assets/lavita.png";
 import ninaMahrImg from "@/assets/nina-mahr.png";
@@ -12,7 +13,6 @@ import someoneHairImg from "@/assets/someone-hair.png";
 import ginaCafeImg from "@/assets/gina-cafe.png";
 import refalShmuelImg from "@/assets/refal-shmuel.png";
 import cafeBarakaiImg from "@/assets/cafe-barakai.png";
-
 
 const projects = [
   { title: "Weins Barbershop", image: weinsImg, link: "https://weins-barbershop.lovable.app" },
@@ -27,74 +27,57 @@ const projects = [
   { title: "קפה גינה - בית קפה ברמת גן", image: ginaCafeImg, link: "https://gina-cofee-shop.lovable.app" },
   { title: "רפאל שמואל — יזם ומנטור עסקי", image: refalShmuelImg, link: "https://refalshmuel.lovable.app/" },
   { title: "קפה ברקאי — בית קפה בים המלח", image: cafeBarakaiImg, link: "https://dessertbarakai.lovable.app/" },
-
 ];
 
-const getAnimClass = (i: number) => {
-  const col = i % 3;
-  if (col === 0) return "scroll-animate-left";
-  if (col === 1) return "scroll-animate";
-  return "scroll-animate-right";
-};
+const streamImages = projects.map((p) => ({ src: p.image, alt: p.title }));
 
 const ProjectsSection = () => {
   const ref = useScrollAnimate();
 
   return (
-    <section id="projects" className="py-32 px-6 bg-black/[0.96] relative" dir="rtl" ref={ref}>
-      <div className="absolute inset-0 animate-shimmer opacity-50" />
+    <section id="projects" className="py-24 bg-background" dir="rtl" ref={ref}>
+      <div className="text-center px-6 mb-10 scroll-animate">
+        <p className="text-xs font-heading font-semibold tracking-[0.3em] text-primary uppercase mb-4">
+          תיק עבודות
+        </p>
+        <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground">
+          הפרויקטים שלנו
+        </h2>
+        <p className="mt-4 text-muted-foreground font-body max-w-lg mx-auto">
+          12 אתרים ללקוחות מכל רחבי הארץ — מספרות, בתי קפה, מאפיות, קוסמטיקה ועוד.
+        </p>
+      </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-20 scroll-animate-blur">
-          <p className="text-xs font-heading font-semibold tracking-[0.3em] text-violet-400 uppercase mb-4">
-            תיק עבודות
-          </p>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-400">
-            הפרויקטים שלנו
-          </h2>
-          <p className="mt-4 text-zinc-500 font-body max-w-lg mx-auto">
-            12 אתרים ללקוחות מכל רחבי הארץ — מספרות, בתי קפה, מאפיות, קוסמטיקה ועוד.
-          </p>
-        </div>
+      <ImageStreamHero
+        images={streamImages}
+        cards={10}
+        speed={20}
+        axis={50}
+        className="h-[420px] md:h-[560px] [mask-image:radial-gradient(120%_80%_at_50%_50%,black_55%,transparent_100%)]"
+      />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {projects.map((p, i) => (
+      <div className="max-w-6xl mx-auto px-6 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {projects.map((p) => (
             <a
               key={p.title}
               href={p.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${getAnimClass(i)} stagger-${(i % 6) + 1} group relative bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden cursor-pointer transition-all duration-500 hover:border-violet-500/50 hover:shadow-xl hover:shadow-violet-500/10 hover:scale-[1.03] hover:-translate-y-2`}
+              className="group flex items-center justify-between gap-3 rounded-lg border border-border bg-card px-4 py-3 transition-colors hover:border-primary/50 hover:bg-secondary"
             >
-              <div className="aspect-[16/10] overflow-hidden bg-zinc-800 flex items-center justify-center">
-                {p.image ? (
-                  <img
-                    src={p.image}
-                    alt={p.title}
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
-                  />
-                ) : (
-                  <div className="bg-gradient-to-br from-violet-900/30 to-violet-600/10 w-full h-full flex items-center justify-center">
-                    <span className="font-heading font-bold text-violet-400 text-lg">{p.title.split("—")[0].trim()}</span>
-                  </div>
-                )}
-              </div>
-
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4 rounded-lg backdrop-blur-sm">
-                <span className="text-white font-heading text-lg font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-300">צפייה באתר</span>
-                <span className="inline-flex items-center gap-2 border border-violet-400/40 text-violet-300 px-5 py-2 text-sm font-body rounded-lg transition-all hover:bg-violet-500/20 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  למעבר לאתר <ExternalLink size={14} />
-                </span>
-              </div>
-
-              <div className="p-4 border-t border-zinc-800">
-                <h3 className="font-heading font-bold text-sm text-zinc-300">{p.title}</h3>
-              </div>
+              <span className="font-heading text-sm font-semibold text-foreground">
+                {p.title}
+              </span>
+              <ExternalLink
+                size={15}
+                className="shrink-0 text-muted-foreground transition-colors group-hover:text-primary"
+              />
             </a>
           ))}
         </div>
 
-        <p className="text-center text-zinc-600 font-body text-sm mt-16 scroll-animate">
+        <p className="text-center text-muted-foreground font-body text-sm mt-12">
           גם האתר הזה עוצב ונבנה על ידינו!
         </p>
       </div>
