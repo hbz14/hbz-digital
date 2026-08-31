@@ -1,6 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import { useScrollAnimate } from "@/hooks/useScrollAnimate";
-import { ImageStreamHero } from "@/components/ui/image-stream-hero";
+import { CircularGallery, type GalleryItem } from "@/components/ui/circular-gallery";
+
 import weinsImg from "@/assets/weins.png";
 import lavitaImg from "@/assets/lavita.png";
 import ninaMahrImg from "@/assets/nina-mahr.png";
