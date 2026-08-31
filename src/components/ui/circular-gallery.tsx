@@ -25,8 +25,20 @@ const CircularGallery = React.forwardRef<HTMLDivElement, CircularGalleryProps>(
   ({ items, className, radius = 600, autoRotateSpeed = 0.02, ...props }, ref) => {
     const [rotation, setRotation] = useState(0);
     const [isScrolling, setIsScrolling] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const animationFrameRef = useRef<number | null>(null);
+
+    useEffect(() => {
+      const mq = window.matchMedia("(max-width: 767px)");
+      const update = () => setIsMobile(mq.matches);
+      update();
+      mq.addEventListener("change", update);
+      return () => mq.removeEventListener("change", update);
+    }, []);
+
+    const effectiveRadius = isMobile ? Math.min(radius, 300) : radius;
+
 
     useEffect(() => {
       const handleScroll = () => {
