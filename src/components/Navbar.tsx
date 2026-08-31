@@ -21,16 +21,16 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-black/80 backdrop-blur-lg border-b border-zinc-800/50"
+          ? "bg-white/85 backdrop-blur-lg border-b border-zinc-200"
           : "bg-transparent"
       }`}
       dir="rtl"
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-0.5">
-          <span className="font-heading text-xl font-light tracking-tight text-zinc-300">digital</span>
+          <span className="font-heading text-xl font-light tracking-tight text-zinc-500">digital</span>
           <span className="font-heading text-xl font-black tracking-tight text-violet-500">.</span>
-          <span className="font-heading text-xl font-black tracking-tight text-white">Hbz</span>
+          <span className="font-heading text-xl font-black tracking-tight text-zinc-900">Hbz</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -38,7 +38,7 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm font-heading font-medium text-zinc-400 hover:text-violet-400 transition-colors"
+              className="text-sm font-heading font-medium text-zinc-600 hover:text-violet-600 transition-colors"
             >
               {l.label}
             </a>
@@ -46,7 +46,7 @@ const Navbar = () => {
         </div>
 
         <button
-          className="md:hidden text-zinc-300 hover:text-violet-400 transition-colors"
+          className="md:hidden text-zinc-700 hover:text-violet-600 transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="תפריט"
         >
@@ -55,12 +55,12 @@ const Navbar = () => {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-black/95 backdrop-blur-lg border-t border-zinc-800/50 px-6 py-4 space-y-4">
+        <div className="md:hidden bg-white/95 backdrop-blur-lg border-t border-zinc-200 px-6 py-4 space-y-4">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="block text-base font-heading text-zinc-300 hover:text-violet-400 transition-colors"
+              className="block text-base font-heading text-zinc-700 hover:text-violet-600 transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               {l.label}
