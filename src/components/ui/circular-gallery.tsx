@@ -79,14 +79,14 @@ const CircularGallery = React.forwardRef<HTMLDivElement, CircularGalleryProps>(
       <div
         ref={ref}
         className={cn("relative w-full h-full overflow-hidden", className)}
-        style={{ perspective: "1200px" }}
+        style={{ perspective: isMobile ? "800px" : "1200px" }}
         {...props}
       >
         <div
           className="absolute inset-0"
           style={{
             transformStyle: "preserve-3d",
-            transform: `translateZ(-${radius}px) rotateY(${rotation}deg)`,
+            transform: `translateZ(-${effectiveRadius}px) rotateY(${rotation}deg)`,
           }}
         >
           {items.map((item, i) => {
@@ -103,10 +103,10 @@ const CircularGallery = React.forwardRef<HTMLDivElement, CircularGalleryProps>(
             return (
               <div
                 key={`${item.common}-${i}`}
-                className="absolute top-1/2 left-1/2 w-[240px] h-[300px] md:w-[300px] md:h-[380px] -ml-[120px] -mt-[150px] md:-ml-[150px] md:-mt-[190px]"
+                className="absolute top-1/2 left-1/2 w-[180px] h-[240px] md:w-[300px] md:h-[380px] -ml-[90px] -mt-[120px] md:-ml-[150px] md:-mt-[190px]"
                 style={{
                   transformStyle: "preserve-3d",
-                  transform: `rotateY(${itemAngle}deg) translateZ(${radius}px)`,
+                  transform: `rotateY(${itemAngle}deg) translateZ(${effectiveRadius}px)`,
                   opacity,
                 }}
               >
