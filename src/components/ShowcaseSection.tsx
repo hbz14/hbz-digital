@@ -1,5 +1,5 @@
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
-import hachatziImg from "@/assets/hachatzi.png";
+import cafeBarakaiImg from "@/assets/cafe-barakai.png";
 
 const ShowcaseSection = () => (
   <section className="bg-background overflow-hidden" dir="rtl">
@@ -18,8 +18,8 @@ const ShowcaseSection = () => (
       }
     >
       <img
-        src={hachatziImg}
-        alt="showcase"
+        src={cafeBarakaiImg}
+        alt="קפה ברקאי - בית קפה בים המלח"
         className="mx-auto rounded-2xl object-cover h-full w-full object-top"
         draggable={false}
       />
